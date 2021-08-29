@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BananaVerdeProdutosNaturais.WebAPI.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20210829011433_init")]
+    [Migration("20210829073452_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -30,6 +30,9 @@ namespace BananaVerdeProdutosNaturais.WebAPI.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Lote")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("ValidadeProduct")

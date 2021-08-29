@@ -30,6 +30,9 @@ namespace BananaVerdeProdutosNaturais.WebAPI.Migrations
                     b.Property<string>("Lote")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("Name")
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("ValidadeProduct")
                         .HasColumnType("TEXT");
 

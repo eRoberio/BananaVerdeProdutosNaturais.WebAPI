@@ -25,6 +25,8 @@ namespace BananaVerdeProdutosNaturais.WebAPI
                 x => x.UseSqlite(Configuration.GetConnectionString("DefaultConnection"))
             );
             services.AddControllers();
+            services.AddCors();
+
             // services.AddSwaggerGen(c =>
             // {
             //     c.SwaggerDoc("v1", new OpenApiInfo { Title = "BananaVerdeProdutosNaturais.WebAPI", Version = "v1" });
@@ -40,7 +42,7 @@ namespace BananaVerdeProdutosNaturais.WebAPI
                // app.UseSwagger();
                // app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "BananaVerdeProdutosNaturais.WebAPI v1"));
             }
-
+            app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             app.UseHttpsRedirection();
 
             app.UseRouting();

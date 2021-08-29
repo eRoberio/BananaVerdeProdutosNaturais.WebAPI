@@ -12,6 +12,7 @@ namespace BananaVerdeProdutosNaturais.WebAPI.Migrations
                 {
                     ProductId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
+                    Name = table.Column<string>(type: "TEXT", nullable: true),
                     Local = table.Column<string>(type: "TEXT", nullable: true),
                     ValidadeProduct = table.Column<string>(type: "TEXT", nullable: true),
                     Category = table.Column<string>(type: "TEXT", nullable: true),
